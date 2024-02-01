@@ -5,6 +5,8 @@ chocolog: providing type.huge
 Edmond: offered tips for optimization
 ]]--
 
+
+ ----------------------Dont touch this
 local osclock = os.clock()
 if not game:IsLoaded() then
     game.Loaded:Wait()
