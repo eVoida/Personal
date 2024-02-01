@@ -183,7 +183,7 @@ Booths_Broadcast.OnClientEvent:Connect(function(username, message)
             return
         elseif class == "Pet" then
             local type = Library.Directory.Pets[item]
-            if type.exclusiveLevel and unitGems <= 30000 and item ~= "Banana" and item ~= "Coin" then
+            if type.exclusiveLevel and unitGems <= 50000 and item ~= "Banana" and item ~= "Coin" then
                 coroutine.wrap(tryPurchase)(uid, gems, item, version, shiny, amount, username, class, playerid, buytimestamp, listTimestamp, snipeNormal)
                 return
             elseif type.titanic and unitGems <= 10000000 then
@@ -209,7 +209,7 @@ Booths_Broadcast.OnClientEvent:Connect(function(username, message)
         elseif item == "Super Lightning" and unitGems <= 1000000 then
             coroutine.wrap(tryPurchase)(uid, gems, item, version, shiny, amount, username, class, playerid, buytimestamp, listTimestamp, snipeNormal)
             return
-        elseif item == "Lucky Block" and unitGems <= 100000 then
+        elseif item == "Lucky Block" and unitGems <= 250000 then
             coroutine.wrap(tryPurchase)(uid, gems, item, version, shiny, amount, username, class, playerid, buytimestamp, listTimestamp, snipeNormal)
             return
         elseif item == "Fortune" and unitGems <= 100000 then
@@ -228,7 +228,7 @@ Booths_Broadcast.OnClientEvent:Connect(function(username, message)
             coroutine.wrap(tryPurchase)(uid, gems, item, version, shiny, amount, username, class, playerid, buytimestamp, listTimestamp, snipeNormal)
             return
         ---------------Tools 
-        elseif item == "Diamond Fishing Rod" and unitGems <= 10000 then
+        elseif item == "Diamond Fishing Rod" and unitGems <= 100000 then
             coroutine.wrap(tryPurchase)(uid, gems, item, version, shiny, amount, username, class, playerid, buytimestamp, listTimestamp, snipeNormal)
             return
         elseif item == "Secret Key Lower Half" and unitGems <= 5000 then
