@@ -31,7 +31,7 @@ if snipeNormalPets == nil then
 end
 
 local vu = game:GetService("VirtualUser")
-Players.LocalPlayer.Idled:connect(function()
+Players.LocalPlayer.Idled:Connect(function()
    vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
    task.wait(1)
    vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
@@ -239,6 +239,19 @@ Booths_Broadcast.OnClientEvent:Connect(function(username, message)
             coroutine.wrap(tryPurchase)(uid, gems, item, version, shiny, amount, username, class, playerid, buytimestamp, listTimestamp, snipeNormal)
             return
         elseif item == "Magic Orb" and unitGems <= 25000 then
+            coroutine.wrap(tryPurchase)(uid, gems, item, version, shiny, amount, username, class, playerid, buytimestamp, listTimestamp, snipeNormal)
+            return
+        ---------------Tools 
+        elseif item == "Diamond Fishing Rod" and unitGems <= 10000 then
+            coroutine.wrap(tryPurchase)(uid, gems, item, version, shiny, amount, username, class, playerid, buytimestamp, listTimestamp, snipeNormal)
+            return
+        elseif item == "Secret Key Lower Half" and unitGems <= 5000 then
+            coroutine.wrap(tryPurchase)(uid, gems, item, version, shiny, amount, username, class, playerid, buytimestamp, listTimestamp, snipeNormal)
+            return
+        elseif item == "Secret Key" and unitGems <= 10000 then
+            coroutine.wrap(tryPurchase)(uid, gems, item, version, shiny, amount, username, class, playerid, buytimestamp, listTimestamp, snipeNormal)
+            return
+        elseif item == "Secret Key Upper Half" and unitGems <= 5000 then
             coroutine.wrap(tryPurchase)(uid, gems, item, version, shiny, amount, username, class, playerid, buytimestamp, listTimestamp, snipeNormal)
             return
         end
