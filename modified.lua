@@ -3,7 +3,7 @@ Credits List
 ethereum: creating the base sniper
 chocolog: providing type.huge
 Edmond: offered tips for optimization
-
+]]--
 
 local osclock = os.clock()
 if not game:IsLoaded() then
