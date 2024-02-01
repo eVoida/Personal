@@ -139,16 +139,11 @@ local function processListingInfo(uid, gems, item, version, shiny, amount, bough
 end
 
 local function tryPurchase(uid, gems, item, version, shiny, amount, username, class, playerid, buytimestamp, listTimestamp, snipeNormal)
-    signal = game:GetService("RunService").Heartbeat:Connect(function()
-        if buytimestamp < workspace:GetServerTimeNow() then
-            signal:Disconnect()
-            signal = nil
-        end
-    end)
-    repeat task.wait() until signal == nil
-
-    local boughtPet, boughtMessage = rs.Network.Booths_RequestPurchase:InvokeServer(playerid, uid)
-    processListingInfo(uid, gems, item, version, shiny, amount, username, class, boughtPet, boughtMessage, snipeNormal)  -- fixed the parameter order
+    if buytimestamp > listTimestamp then
+	task.wait(buytimestamp - workspace:GetServerTimeNow() - Players.LocalPlayer:GetNetworkPing())
+    end
+    local boughtPet, boughtMessage = game:GetService("ReplicatedStorage").Network.Booths_RequestPurchase:InvokeServer(playerid, uid)
+    processListingInfo(uid, gems, item, version, shiny, amount, username, boughtPet, class, boughtMessage, snipeNormal)
 end
 
 Booths_Broadcast.OnClientEvent:Connect(function(username, message)
