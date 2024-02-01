@@ -204,8 +204,8 @@ Booths_Broadcast.OnClientEvent:Connect(function(username, message)
         elseif class == "Egg" and unitGems <= 600000 then
             coroutine.wrap(tryPurchase)(uid, gems, item, version, shiny, amount, username, class, playerid, buytimestamp, listTimestamp, snipeNormal)
             return
-        elseif ((string.find(item, "Key") and not string.find(item, "Lower") or string.find(item, "Ticket")) and unitGems <= 2500 then
-            coroutine.wrap(tryPurchase)(uid, gems, item, version, shiny, amount, username, class, playerid, buytimestamp, listTimestamp, snipeNormal)
+        elseif ((string.find(item, "Key") and not string.find(item, "Lower")) or string.find(item, "Ticket")) and unitGems <= 2500 then 
+                    coroutine.wrap(tryPurchase)(uid, gems, item, version, shiny, amount, username, class, playerid, buytimestamp, listTimestamp, snipeNormal)
             return
         -----------Enchants
         elseif item == "Chest Mimic" and unitGems <= 1000000 then
