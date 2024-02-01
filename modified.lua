@@ -207,6 +207,9 @@ Booths_Broadcast.OnClientEvent:Connect(function(username, message)
         elseif ((string.find(item, "Key") and not string.find(item, "Lower")) or string.find(item, "Ticket")) and unitGems <= 2500 then
             coroutine.wrap(tryPurchase)(uid, gems, item, version, shiny, amount, username, class, playerid, buytimestamp, listTimestamp, snipeNormal)
             return
+	elseif ((string.find(item, "Secret Key") or string.find(item, "Secret Key: Lower")) or string.find(item, "Secret Key: Upper")) and unitGems <= 25000 then
+            coroutine.wrap(tryPurchase)(uid, gems, item, version, shiny, amount, username, class, playerid, buytimestamp, listTimestamp, snipeNormal)
+            return			
         -----------Enchants
         elseif string.find(item, "Chest Mimic") and unitGems <= 1000000 then
             coroutine.wrap(tryPurchase)(uid, gems, item, version, shiny, amount, username, class, playerid, buytimestamp, listTimestamp, snipeNormal)
@@ -229,13 +232,13 @@ Booths_Broadcast.OnClientEvent:Connect(function(username, message)
         elseif item == "Massive Comet" and unitGems <= 100000 then
             coroutine.wrap(tryPurchase)(uid, gems, item, version, shiny, amount, username, class, playerid, buytimestamp, listTimestamp, snipeNormal)
             return
-        elseif item == "Shiny Hunter" and unitGems <= 100000 then
+        elseif item == "Diamond Chest Mimic" and unitGems <= 800000 then
             coroutine.wrap(tryPurchase)(uid, gems, item, version, shiny, amount, username, class, playerid, buytimestamp, listTimestamp, snipeNormal)
             return
         elseif item == "Party Time" and unitGems <= 45000 then
             coroutine.wrap(tryPurchase)(uid, gems, item, version, shiny, amount, username, class, playerid, buytimestamp, listTimestamp, snipeNormal)
             return
-        elseif item == "Exotic Pet" and unitGems <= 25000 then
+        elseif item == "Magic Orb" and unitGems <= 25000 then
             coroutine.wrap(tryPurchase)(uid, gems, item, version, shiny, amount, username, class, playerid, buytimestamp, listTimestamp, snipeNormal)
             return
         end
