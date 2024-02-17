@@ -4,8 +4,8 @@ local Player = game.Players.LocalPlayer
 local character = Player.Character
 local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
 local Active = Things.__INSTANCE_CONTAINER.Active
-local ActiveBlocks = Active.AdvancedDigsite.Important.ActiveBlocks
-local ActiveChests = Active.AdvancedDigsite.Important.ActiveChests
+local ActiveBlocks = Active.Digsite.Important.ActiveBlocks
+local ActiveChests = Active.Digsite.Important.ActiveChests
 
 local CurrentActive = function()
     return Active:GetChildren()[1]
@@ -80,7 +80,7 @@ local Tabs = {
 local Options = Fluent.Options
 
 do
-    local Toggle = Tabs.Digging:AddToggle("DigSite", {Title = "Auto AdvancedDigsite", Default = false})
+    local Toggle = Tabs.Digging:AddToggle("DigSite", {Title = "AutoDigsite", Default = false})
     Toggle:OnChanged(function()
         Toggle = Options.DigSite.Value
         game:GetService("RunService").Stepped:Connect(function()
