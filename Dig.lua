@@ -22,7 +22,7 @@ local GetBlock = function()
     local blocks = ActiveBlocks:GetChildren()
     for i, v in pairs(ActiveBlocks:GetChildren()) do
         local CurrentBlock = blocks[#blocks - i + 1]
-        if CurrentBlock.Color.R > 160 or CurrentBlock.Color.G > 32 or CurrentBlock.Color.B > 240 then
+        if CurrentBlock.Color.R > 0.160 or CurrentBlock.Color.G > 0.32 or CurrentBlock.Color.B > 0.240 then
             local coord = CurrentBlock:GetAttribute('Coord')
             if (coord.X > 1 and coord.X < 16 and coord.Z > 1 and coord.Z < 16) then
                 return CurrentBlock
