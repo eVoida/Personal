@@ -4,8 +4,8 @@ local Player = game.Players.LocalPlayer
 local character = Player.Character
 local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
 local Active = Things.__INSTANCE_CONTAINER.Active
-local ActiveBlocks = Active.Digsite.Important.ActiveBlocks
-local ActiveChests = Active.Digsite.Important.ActiveChests
+local ActiveBlocks = Active.AdvancedDigsite.Important.ActiveBlocks
+local ActiveChests = Active.AdvancedDigsite.Important.ActiveChests
 
 local CurrentActive = function()
     return Active:GetChildren()[1]
