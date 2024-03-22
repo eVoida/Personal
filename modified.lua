@@ -2,7 +2,7 @@
 Credits List
 ethereum: creating the base sniper
 chocolog: providing type.huge
-Edmond: offered tips for optimization
+edmond: gave tips
 me: fixed the server hop and itemlist 
 ]]--
 
