@@ -1,9 +1,8 @@
 --[[
 Credits List
 ethereum: creating the base sniper
-chocolog: providing type.huge
-edmond: gave tips
-me: fixed the server hop and itemlist 
+moon - helped with the script
+me: optimized the script and fixed the server hop and list 
 ]]--
 
 
