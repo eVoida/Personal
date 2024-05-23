@@ -32,7 +32,7 @@ local GetBlock = function()
     return nil
 end
  
-local Dig = function () -- yes Dig my ass out pls mmm daddy
+local Dig = function () 
     local Chest = GetChest()
     if Chest then
         j = 1
@@ -64,8 +64,8 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 
 local Window = Fluent:CreateWindow({
-    Title = "Ani's script PS99",
-    SubTitle = "by Ani",
+    Title = "Dig",
+    SubTitle = "Pro Digging Script",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
     Acrylic = false, -- The blur may be detectable, setting this to false disables blur entirely
@@ -132,7 +132,7 @@ SaveManager:BuildConfigSection(Tabs.Digging)
 Window:SelectTab(1)
 
 Fluent:Notify({
-    Title = "Ani's fix script'",
+    Title = "script'",
     Content = "script loaded.",
     Duration = 4
 })
